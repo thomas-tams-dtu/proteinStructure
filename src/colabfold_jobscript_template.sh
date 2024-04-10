@@ -9,9 +9,9 @@
 ### -- Select the resources: 1 gpu in exclusive process mode --
 #BSUB -gpu "num=1:mode=exclusive_process"
 ### -- set walltime limit: hh:mm --  maximum 24 hours for GPU-queues right now
-#BSUB -W 10:00
+#BSUB -W 01:00
 # request 5GB of system-memory
-#BSUB -R "rusage[mem=15GB]"
+#BSUB -R "rusage[mem=5GB]"
 ### -- set the email address --
 # please uncomment the following line and put in your e-mail address,
 # if you want to receive e-mail notifications on a non-default address
@@ -26,7 +26,12 @@
 #BSUB -e logs/fold/gpu_<complex>.err
 # -- end of LSF options --
 
+# Get localcolabfold env
 source /dtu/projects/RFdiffusion/setup.sh
 module load colabfold
 
-colabfold_batch --templates --amber --use-gpu-relax data/complexes/<complex>/<complex>_complex.fasta data/complexes/<complex>/
+# Get openmm env
+source /zhome/99/d/155947/scratch/miniconda3/bin/activate openmm 
+
+colabfold_batch --templates --num-recycle 1 --num-models 1  data/complexes/<complex>/<complex>_complex.fasta data/complexes/<complex>/
+#colabfold_batch --templates --num-recycle 5 --num-models 5  data/complexes/<complex>/<complex>_complex.fasta data/complexes/<complex>/
