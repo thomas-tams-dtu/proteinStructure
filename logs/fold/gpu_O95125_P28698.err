@@ -1,0 +1,28 @@
+  0%|          | 0/300 [elapsed: 00:00 remaining: ?]SUBMIT:   0%|          | 0/300 [elapsed: 00:00 remaining: ?]COMPLETE:   0%|          | 0/300 [elapsed: 00:00 remaining: ?]COMPLETE: 100%|██████████| 300/300 [elapsed: 00:00 remaining: 00:00]COMPLETE: 100%|██████████| 300/300 [elapsed: 00:17 remaining: 00:00]
+  0%|          | 0/300 [elapsed: 00:00 remaining: ?]SUBMIT:   0%|          | 0/300 [elapsed: 00:00 remaining: ?]COMPLETE:   0%|          | 0/300 [elapsed: 00:00 remaining: ?]COMPLETE: 100%|██████████| 300/300 [elapsed: 00:00 remaining: 00:00]COMPLETE: 100%|██████████| 300/300 [elapsed: 00:03 remaining: 00:00]
+Traceback (most recent call last):
+  File "/dtu/projects/RFdiffusion/colabfold/1.5.5/localcolabfold/colabfold-conda/bin/colabfold_batch", line 8, in <module>
+    sys.exit(main())
+  File "/dtu/projects/RFdiffusion/colabfold/1.5.5/localcolabfold/colabfold-conda/lib/python3.10/site-packages/colabfold/batch.py", line 2037, in main
+    run(
+  File "/dtu/projects/RFdiffusion/colabfold/1.5.5/localcolabfold/colabfold-conda/lib/python3.10/site-packages/colabfold/batch.py", line 1575, in run
+    results = predict_structure(
+  File "/dtu/projects/RFdiffusion/colabfold/1.5.5/localcolabfold/colabfold-conda/lib/python3.10/site-packages/colabfold/batch.py", line 523, in predict_structure
+    pdb_lines = relax_me(
+  File "/dtu/projects/RFdiffusion/colabfold/1.5.5/localcolabfold/colabfold-conda/lib/python3.10/site-packages/colabfold/relax.py", line 14, in relax_me
+    from alphafold.relax import relax
+  File "/dtu/projects/RFdiffusion/colabfold/1.5.5/localcolabfold/colabfold-conda/lib/python3.10/site-packages/alphafold/relax/relax.py", line 18, in <module>
+    from alphafold.relax import amber_minimize
+  File "/dtu/projects/RFdiffusion/colabfold/1.5.5/localcolabfold/colabfold-conda/lib/python3.10/site-packages/alphafold/relax/amber_minimize.py", line 25, in <module>
+    from alphafold.relax import cleanup
+  File "/dtu/projects/RFdiffusion/colabfold/1.5.5/localcolabfold/colabfold-conda/lib/python3.10/site-packages/alphafold/relax/cleanup.py", line 22, in <module>
+    import pdbfixer
+  File "/dtu/projects/RFdiffusion/colabfold/1.5.5/localcolabfold/colabfold-conda/lib/python3.10/site-packages/pdbfixer/__init__.py", line 2, in <module>
+    from .pdbfixer import PDBFixer
+  File "/dtu/projects/RFdiffusion/colabfold/1.5.5/localcolabfold/colabfold-conda/lib/python3.10/site-packages/pdbfixer/pdbfixer.py", line 35, in <module>
+    import openmm as mm
+  File "/dtu/projects/RFdiffusion/colabfold/1.5.5/localcolabfold/colabfold-conda/lib/python3.10/site-packages/openmm/__init__.py", line 19, in <module>
+    from openmm.openmm import *
+  File "/dtu/projects/RFdiffusion/colabfold/1.5.5/localcolabfold/colabfold-conda/lib/python3.10/site-packages/openmm/openmm.py", line 13, in <module>
+    from . import _openmm
+ImportError: /lib64/libstdc++.so.6: version `GLIBCXX_3.4.20' not found (required by /dtu/projects/RFdiffusion/colabfold/1.5.5/localcolabfold/colabfold-conda/lib/python3.10/site-packages/openmm/_openmm.cpython-310-x86_64-linux-gnu.so)
