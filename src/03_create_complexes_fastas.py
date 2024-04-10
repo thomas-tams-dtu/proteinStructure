@@ -69,8 +69,8 @@ for uniprot_id in all_uniprot_ids:
 # Create complexes fasta for scan domains
 for id, seq in scan_domains.items():
     with open(f'data/complexes/{id}_{target_protein_id}_scand_complex.fasta', 'w') as f:
-        f.write(f'>{id}_{target_protein_id} SCAN boxes\n')
+        f.write(f'>{id} SCAN box\n')
         f.write(scan_domains[target_protein_id])
-        f.write(":")
         f.write('\n')
+        f.write(f'>{target_protein_id} SCAN box\n')
         f.write(seq)
