@@ -1,0 +1,7 @@
+2024-04-11 22:52:57,031 - INFO - PDBminer is starting
+2024-04-11 22:52:57,285 - WARNING - No Uniprot record in this id, no Hugo Name could be retrived with UniProt for ['P22681']. Gene name assigned NA.
+2024-04-11 22:52:57,302 - INFO - input file created based on hugo name and uniprot id, file name: input_file.csv
+2024-04-11 22:52:57,302 - INFO - Pipeline is starting
+2024-04-11 22:52:58,837 - WARNING - Uniprot returned 32 structures. NOTICE that structures deposited in the PDB within 8 weeks may not be included in this list, P22681.
+2024-04-11 22:54:06,122 - INFO - total runtime: 0:01:09.091075
+2024-04-11 22:54:06,123 - INFO - PDBminer has finished.
