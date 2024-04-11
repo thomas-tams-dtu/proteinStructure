@@ -1,7 +1,0 @@
-2024-04-02 20:50:32,584 - INFO - PDBminer is starting
-2024-04-02 20:50:32,821 - WARNING - No Uniprot record in this id, no Hugo Name could be retrived with UniProt for ['O95125']. Gene name assigned NA.
-2024-04-02 20:50:32,830 - INFO - input file created based on hugo name and uniprot id, file name: input_file.csv
-2024-04-02 20:50:32,831 - INFO - Pipeline is starting
-2024-04-02 20:50:33,299 - WARNING - Uniprot did not return any structures for O95125
-2024-04-02 20:50:34,449 - INFO - total runtime: 0:00:01.864879
-2024-04-02 20:50:34,449 - INFO - PDBminer has finished.
