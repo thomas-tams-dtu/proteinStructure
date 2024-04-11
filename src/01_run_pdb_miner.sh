@@ -13,16 +13,16 @@ fi
 
 
 # Assigning CSV file
-csv_file=$1
+csv_file="data/mentha_MZF1.csv"
 
 # Reading uniprot_id and names of proteins from mentha file
 # uniprot ids
-cut -d ',' -f 1 $csv_file | tail -n +2 | tail -n 1 > ${pdb_miner_dir}/tmp_ids.txt    # Grabbing first protein of interaction network
-cut -d ',' -f 3 $csv_file | tail -n +2 >> ${pdb_miner_dir}/tmp_ids.txt               # Grabbing other proteins of interaction network
+cut -d ',' -f 1 $csv_file | tail -n +2 | tail -n 1 > ${pdb_miner_dir}/ids.txt    # Grabbing first protein of interaction network
+cut -d ',' -f 3 $csv_file | tail -n +2 >> ${pdb_miner_dir}/ids.txt               # Grabbing other proteins of interaction network
 
 # names
-cut -d ',' -f 2 $csv_file | tail -n +2 | tail -n 1 > ${pdb_miner_dir}/tmp_names.txt    # Grabbing first protein of interaction network
-cut -d ',' -f 4 $csv_file | tail -n +2 >> ${pdb_miner_dir}/tmp_names.txt               # Grabbing other proteins of interaction network
+cut -d ',' -f 2 $csv_file | tail -n +2 | tail -n 1 > ${pdb_miner_dir}/names.txt    # Grabbing first protein of interaction network
+cut -d ',' -f 4 $csv_file | tail -n +2 >> ${pdb_miner_dir}/names.txt               # Grabbing other proteins of interaction network
 
 
 readarray -t names < ${pdb_miner_dir}/names.txt
