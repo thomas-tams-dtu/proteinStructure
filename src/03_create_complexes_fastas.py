@@ -78,3 +78,8 @@ for id, seq in scan_domains.items():
         f.write(seq)
     
     print(f'Wrote scan domain complex fasta for {id} and {target_protein_id} in data/complexes/{id}_{target_protein_id}_scand_complex.fasta')
+
+# Write file with all complexes names
+with open('data/complexes/complexes_names.txt', 'w') as f:
+    for id in scan_domains.keys():
+        f.write(f'{id}_{target_protein_id}_scand_complex\n')
