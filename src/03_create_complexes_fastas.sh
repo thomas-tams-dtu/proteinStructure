@@ -27,22 +27,34 @@ core_protein_id=$(head -n 1 "${complexes_dir}/tmp_ids.txt")
 core_protein_file="${sequence_dir}/${core_protein_id}.fasta"
 echo "$core_protein_file"
 
+# Construct list of complexes
+file_path="path/to/your/file"
+
+if [ -f "${complexes_dir}/complex_fastas.txt" ]; then
+    rm "${complexes_dir}/complex_fastas.txt"
+    touch "${complexes_dir}/complex_fastas.txt"
+else
+    touch "${complexes_dir}/complex_fastas.txt"
+fi
+
 # Loop through each UniProt ID in the file
 while IFS= read -r id; do
     # Make a directory for the complex
     current_complex_dir="${complexes_dir}/${id}_${core_protein_id}"
     mkdir -p "${current_complex_dir}"
 
+    # Write header name of complex
+    echo ">${id}_${core_protein_id}_complex" > "${current_complex_dir}/${id}_${core_protein_id}_complex.fasta" 
+
     # Write core protein sequence
-    cat "${core_protein_file}" > "${current_complex_dir}/${id}_${core_protein_id}_complex.fasta"
+    tail -n +2 "${core_protein_file}" >> "${current_complex_dir}/${id}_${core_protein_id}_complex.fasta"
+
+    # Write ":" seperator for multimer
+    echo ":" >> "${current_complex_dir}/${id}_${core_protein_id}_complex.fasta"
 
     # Append interactor protein sequence
-    cat "${sequence_dir}/${id}.fasta" >> "${current_complex_dir}/${id}_${core_protein_id}_complex.fasta"
+    tail -n +2 "${sequence_dir}/${id}.fasta" >> "${current_complex_dir}/${id}_${core_protein_id}_complex.fasta"
 
     # Check if the download was successful
-    #if [ $? -eq 0 ]; then
-    #    echo "Downloaded ${id}.fasta"
-    #else
-    #    echo "Failed to download ${id}.fasta"
-    #fi
+    echo ${id}_${core_protein_id} >> "${complexes_dir}/complex_fastas.txt"
 done < "${complexes_dir}/tmp_ids.txt"
