@@ -1,57 +1,39 @@
-
+#!/usr/bin/env python
 
 import subprocess
-
 import os
 
-# List of pdb files to process
-pdb_files = [
-    "/home/people/s223271/22117_proteins/projects/group6/Complex_pdbs/O95125_P28698_scand_complex.pdb",
-    "/home/people/s223271/22117_proteins/projects/group6/Complex_pdbs/P17028_P28698_scand_complex.pdb",
-    "/home/people/s223271/22117_proteins/projects/group6/Complex_pdbs/P28698_P28698_scand_complex.pdb",
-    "/home/people/s223271/22117_proteins/projects/group6/Complex_pdbs/P57086_P28698_scand_complex.pdb",
-    "/home/people/s223271/22117_proteins/projects/group6/Complex_pdbs/Q8NBB4_P28698_scand_complex.pdb",
-    "/home/people/s223271/22117_proteins/projects/group6/Complex_pdbs/Q15697_P28698_scand_complex.pdb"
+complexes = ["O95125_P28698_scand_complex",
+           "P17028_P28698_scand_complex",
+           "P28698_P28698_scand_complex",
+           "P57086_P28698_scand_complex",
+           "Q8NBB4_P28698_scand_complex",
+           "Q15697_P28698_scand_complex"]
 
-    
-]
-
-
-
-folders = ["O95125_P28698", "P17028_P28698", "P28698_P28698", "P57086_P28698", "Q8NBB4_P28698", "Q15697_P28698"]
-
-
-
-# Base directory
-base_dir = "/home/people/s223271/22117_proteins/projects/group6"
-
-
-
-# Base command without the file name
-base_command = "nohup mutatex {pdb_file} -p 8 -m data/mutatex/mutation_list.txt -x /home/ctools/foldx5_2024/foldx -f suite5 -R data/mutatex/repair_runfile_template.txt -M data/mutatex/mutate_runfile_template.txt -L -l -v -C deep -B -I data/mutatex/interface_runfile_template.txt --poslist data/interaction_residues&"
-
-
-
- # Remember the original directory
+# Remember the original directory
 original_dir = os.getcwd()
 
-for i, pdb_file in enumerate(pdb_files):
-
-    folder_path = os.path.join(base_dir, folders[i])
+for i, complex_name in enumerate(complex):
+    # Results path
+    mutatex_results_dir = f"data/mutatex/{complex_name}"
     
     # Create the directory if it doesn't exist
-    os.makedirs(folder_path, exist_ok=True)
+    os.makedirs(mutatex_results_dir, exist_ok=True)
     
     # Change to the folder directory
-    os.chdir(folder_path)
+    os.chdir(mutatex_results_dir)
     
     # Format the command with the current pdb file
-    command = base_command.format(pdb_file=pdb_file)
+    command = base_command = f"nohup mutatex ../../scan_complex_pdbs/{complex_name}.pdb -p 8 -m ../mutation_list.txt -x /home/ctools/foldx5_2024/foldx -f suite5 -R ../repair_runfile_template.txt -M data/mutatex/mutate_runfile_template.txt -L -l -v -C deep -B -I ../mutatex/interface_runfile_template.txt --poslist ../../interaction_residues/{complex_name}_interactor_residues.txt &"
     
     # Execute the command
     subprocess.run(command, shell=True)
     
     # Change back to the original directory
     os.chdir(original_dir)
+
+    # Print working directory
+    print(os.getcwd())
+    break
 
  
