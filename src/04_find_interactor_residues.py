@@ -76,6 +76,7 @@ def interfaceResidues(cmpx, cA='c. A', cB='c. B', cutoff=1.0, selName="interface
 	
 	# get the area of the complete complex
 	cmd.get_area(tempC, load_b=1)
+	
 	# copy the areas from the loaded b to the q, field.
 	cmd.alter(tempC, 'q=b')
 	
