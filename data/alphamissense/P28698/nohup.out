@@ -1,2 +1,4 @@
 usage: alphamissense UNIPROT_AC
 example: alphamissense P62942
+usage: alphamissense UNIPROT_AC
+example: alphamissense P62942
