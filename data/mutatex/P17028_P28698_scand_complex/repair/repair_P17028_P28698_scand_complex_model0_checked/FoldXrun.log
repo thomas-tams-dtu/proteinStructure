@@ -1,0 +1,178 @@
+   ********************************************
+   ***                                      ***
+   ***             FoldX 5 (c)            ***
+   ***                                      ***
+   ***     code by the FoldX Consortium     ***
+   ***                                      ***
+   ***     Jesper Borg, Frederic Rousseau   ***
+   ***    Joost Schymkowitz, Luis Serrano   ***
+   ***    Peter Vanhee, Erik Verschueren    ***
+   ***     Lies Baeten, Javier Delgado      ***
+   ***       and Francois Stricher          ***
+   *** and any other of the 9! permutations ***
+   ***   based on an original concept by    ***
+   ***   Raphael Guerois and Luis Serrano   ***
+   ********************************************
+
+Reading config file 'runfile.txt'
+Start RepairPDB >>>
+
+1 models read: P17028_P28698_scand_complex_model0_checked.pdb
+"P17028_P28698_scand_complex_model0_checked_Repair.fxout"
+Repair will take all residues into account
+wild type
+
+BackHbond       =               -115.97
+SideHbond       =               -23.00
+Energy_VdW      =               -189.95
+Electro         =               -12.09
+Energy_SolvP    =               262.66
+Energy_SolvH    =               -252.02
+Energy_vdwclash =               11.34
+energy_torsion  =               3.03
+backbone_vdwclash=              145.39
+Entropy_sidec   =               99.96
+Entropy_mainc   =               223.08
+water bonds     =               0.00
+helix dipole    =               -3.36
+loop_entropy    =               0.00
+cis_bond        =               0.00
+disulfide       =               0.00
+kn electrostatic=               -1.99
+partial covalent interactions = 0.00
+Energy_Ionisation =             0.46
+Entropy Complex =               0.00
+-----------------------------------------------------------
+Total          = 				  2.14
+
+Flipping HNQ
+
+BackHbond       =               -115.97
+SideHbond       =               -23.00
+Energy_VdW      =               -189.95
+Electro         =               -12.09
+Energy_SolvP    =               262.66
+Energy_SolvH    =               -252.02
+Energy_vdwclash =               11.34
+energy_torsion  =               3.03
+backbone_vdwclash=              145.39
+Entropy_sidec   =               99.96
+Entropy_mainc   =               223.08
+water bonds     =               0.00
+helix dipole    =               -3.36
+loop_entropy    =               0.00
+cis_bond        =               0.00
+disulfide       =               0.00
+kn electrostatic=               -1.99
+partial covalent interactions = 0.00
+Energy_Ionisation =             0.46
+Entropy Complex =               0.00
+-----------------------------------------------------------
+Total          = 				  2.14
+
+Now Optimizing Residues
+Now optimizing Residue ARGA1
+Optimize Residue ID= ARGA1
+
+BackHbond       =               -116.00
+SideHbond       =               -23.00
+Energy_VdW      =               -190.00
+Electro         =               -12.14
+Energy_SolvP    =               262.67
+Energy_SolvH    =               -252.08
+Energy_vdwclash =               11.34
+energy_torsion  =               3.03
+backbone_vdwclash=              145.41
+Entropy_sidec   =               99.98
+Entropy_mainc   =               223.08
+water bonds     =               0.00
+helix dipole    =               -3.36
+loop_entropy    =               0.00
+cis_bond        =               0.00
+disulfide       =               0.00
+kn electrostatic=               -1.98
+partial covalent interactions = 0.00
+Energy_Ionisation =             0.46
+Entropy Complex =               0.00
+-----------------------------------------------------------
+Total          = 				  1.98
+
+Now optimizing Residue LEUA2
+Optimize Residue ID= LEUA2
+
+BackHbond       =               -116.00
+SideHbond       =               -23.00
+Energy_VdW      =               -190.00
+Electro         =               -12.14
+Energy_SolvP    =               262.66
+Energy_SolvH    =               -252.07
+Energy_vdwclash =               11.34
+energy_torsion  =               3.03
+backbone_vdwclash=              145.41
+Entropy_sidec   =               99.97
+Entropy_mainc   =               223.08
+water bonds     =               0.00
+helix dipole    =               -3.36
+loop_entropy    =               0.00
+cis_bond        =               0.00
+disulfide       =               0.00
+kn electrostatic=               -1.98
+partial covalent interactions = 0.00
+Energy_Ionisation =             0.46
+Entropy Complex =               0.00
+-----------------------------------------------------------
+Total          = 				  1.98
+
+Now optimizing Residue ARGA3
+Optimize Residue ID= ARGA3
+
+BackHbond       =               -116.00
+SideHbond       =               -23.00
+Energy_VdW      =               -189.97
+Electro         =               -12.14
+Energy_SolvP    =               262.59
+Energy_SolvH    =               -252.07
+Energy_vdwclash =               11.34
+energy_torsion  =               3.03
+backbone_vdwclash=              145.41
+Entropy_sidec   =               99.95
+Entropy_mainc   =               223.08
+water bonds     =               0.00
+helix dipole    =               -3.36
+loop_entropy    =               0.00
+cis_bond        =               0.00
+disulfide       =               0.00
+kn electrostatic=               -1.98
+partial covalent interactions = 0.00
+Energy_Ionisation =             0.46
+Entropy Complex =               0.00
+-----------------------------------------------------------
+Total          = 				  1.90
+
+Now optimizing Residue PHEA4
+Optimize Residue ID= PHEA4
+
+BackHbond       =               -116.00
+SideHbond       =               -23.00
+Energy_VdW      =               -189.96
+Electro         =               -12.15
+Energy_SolvP    =               262.56
+Energy_SolvH    =               -252.07
+Energy_vdwclash =               11.09
+energy_torsion  =               3.03
+backbone_vdwclash=              145.41
+Entropy_sidec   =               99.95
+Entropy_mainc   =               223.08
+water bonds     =               0.00
+helix dipole    =               -3.36
+loop_entropy    =               0.00
+cis_bond        =               0.00
+disulfide       =               0.00
+kn electrostatic=               -1.98
+partial covalent interactions = 0.00
+Energy_Ionisation =             0.46
+Entropy Complex =               0.00
+-----------------------------------------------------------
+Total          = 				  1.64
+
+Now optimizing Residue ARGA5

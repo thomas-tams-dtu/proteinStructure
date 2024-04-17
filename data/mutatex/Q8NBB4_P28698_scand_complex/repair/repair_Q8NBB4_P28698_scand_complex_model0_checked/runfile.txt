@@ -1,0 +1,6 @@
+command=RepairPDB
+pdb=Q8NBB4_P28698_scand_complex_model0_checked.pdb
+
+temperature=298
+water=-CRYSTAL
+complexWithDNA=true
