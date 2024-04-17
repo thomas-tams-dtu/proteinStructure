@@ -28,7 +28,7 @@ base_dir = "/home/people/s223271/22117_proteins/projects/group6"
 
 
 # Base command without the file name
-base_command = "nohup mutatex {pdb_file} -p 8 -m /home/people/s223271/22117_proteins/projects/group6/mutations/SCAN_domain_P28698_model0_checked_Repair/mutation_list.txt -x /home/ctools/foldx5_2024/foldx -f suite5 -R /home/people/s223271/22117_proteins/projects/group6/repair_runfile_template.txt -M /home/people/s223271/22117_proteins/projects/group6/mutate_runfile_template.txt -L -l -v -C deep -B -I /home/people/s223271/22117_proteins/projects/group6/interface_runfile_template.txt &"
+base_command = "nohup mutatex {pdb_file} -p 8 -m data/mutatex/mutation_list.txt -x /home/ctools/foldx5_2024/foldx -f suite5 -R data/mutatex/repair_runfile_template.txt -M data/mutatex/mutate_runfile_template.txt -L -l -v -C deep -B -I data/mutatex/interface_runfile_template.txt --poslist data/interaction_residues&"
 
 
 
